@@ -47,10 +47,10 @@ function getLength(numbers) {
 
 function getSum(numbers) {
   let sum = 0;
- for(let i = 0; i < numbers.length; i++) {
-  sum = sum + numbers[i];
- }
- return sum;
+  for (let i = 0; i < numbers.length; i++) {
+    sum = sum + numbers[i];
+  }
+  return sum;
 }
 
 /**
@@ -60,7 +60,7 @@ function getSum(numbers) {
 function getMean(numbers) {
   let mean = getSum(numbers) / numbers.length;
   return mean;
-  
+
 }
 
 /**
@@ -68,7 +68,14 @@ function getMean(numbers) {
  * @returns {number} the smallest of the numbers
  */
 function getMin(numbers) {
-  // TODO
+  let min = numbers[0];
+  for (let i = 0; i < numbers.length; i++) {
+    if (min > numbers[i]) {
+      min = numbers[i];
+    }
+    return min;
+  }
+
 }
 
 /**
