@@ -4,7 +4,7 @@
 // Prompt the user for a list of integers separated by commas.
 const userInputString = prompt(
   "Please enter some integers separated by commas.",
-  "1,2,3,4,5"
+  "5,2,6,4,1,3"
 );
 
 // Split the string of numbers into an array of strings.
@@ -73,8 +73,9 @@ function getMin(numbers) {
     if (min > numbers[i]) {
       min = numbers[i];
     }
-    return min;
+
   }
+  return min;
 
 }
 
@@ -83,7 +84,14 @@ function getMin(numbers) {
  * @returns {number} the largest of the numbers
  */
 function getMax(numbers) {
-  // TODO
+  let max = numbers[0];
+  for (let i = 0; i < numbers.length; i++) {
+    if (max < numbers[i]) {
+      max = numbers[i];
+      i++;
+    }
+  }
+  return max;
 }
 
 /**
@@ -91,7 +99,8 @@ function getMax(numbers) {
  * @returns {number} the range of the numbers (max - min)
  */
 function getRange(numbers) {
-  // TODO
+  let range = getMin(numbers) + "-" + getMax(numbers);
+  return range;
 }
 
 /**
