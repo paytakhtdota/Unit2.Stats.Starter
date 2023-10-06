@@ -37,15 +37,20 @@ console.log(`The odd numbers you gave are ${getOdds(numbers)}.`);
  * @returns {number} the length of the array
  */
 function getLength(numbers) {
-  // TODO
+  return numbers.length;
 }
 
 /**
  * @param {number[]} numbers an array of integers
  * @returns {number} the sum of the numbers
  */
+
 function getSum(numbers) {
-  // TODO
+  let sum = 0;
+ for(let i = 0; i < numbers.length; i++) {
+  sum = sum + numbers[i];
+ }
+ return sum;
 }
 
 /**
@@ -53,7 +58,9 @@ function getSum(numbers) {
  * @returns {number} the mean of the numbers
  */
 function getMean(numbers) {
-  // TODO
+  let mean = getSum(numbers) / numbers.length;
+  return mean;
+  
 }
 
 /**
