@@ -8,7 +8,10 @@ const userInputString = prompt(
 );
 
 // Split the string of numbers into an array of strings.
+console.log(userInputString);
+console.log(typeof userInputString);
 const stringArray = userInputString.split(",");
+console.log(stringArray);
 
 // Convert the array of strings into an array of numbers.
 const numbers = [];
@@ -99,7 +102,7 @@ function getMax(numbers) {
  * @returns {number} the range of the numbers (max - min)
  */
 function getRange(numbers) {
-  let range = getMin(numbers) + "-" + getMax(numbers);
+  let range = getMin(numbers) + " to " + getMax(numbers);
   return range;
 }
 
@@ -108,7 +111,17 @@ function getRange(numbers) {
  * @returns {number[]} the even numbers in the array
  */
 function getEvens(numbers) {
-  // TODO
+  const even=[];
+  const odds=[];
+  for (let i = 0; i < numbers.length; i++){
+    if(numbers[i]%2 == 0){
+      even.push(numbers[i]);
+    }
+    else{
+      odds.push(numbers[i]);
+    }
+  } 
+  return even;
 }
 
 /**
@@ -116,5 +129,16 @@ function getEvens(numbers) {
  * @returns {number[]} the odd numbers in the array
  */
 function getOdds(numbers) {
-  // TODO
+  const even=[];
+  const odds=[];
+  for (let i = 0; i < numbers.length; i++){
+    if(numbers[i]%2 == 0){
+      even.push(numbers[i]);
+    }
+    else{
+      odds.push(numbers[i]);
+    }
+  } 
+  return odds;
 }
+
